@@ -1,0 +1,40 @@
+.card {
+    margin: 2rem 2rem 2rem 0;
+    padding:1rem;
+    width:250px;
+    box-shadow:0 0 28px 4px rgba(0, 0, 0, 1.0);
+    transition: transform .3s ease;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+.card_title {
+    font-weight:800;
+    font-size: 1.5rem;
+}
+.card_button {
+    display:"flex";
+    justify-content: flex-end;
+}
+.card_body{
+    margin:1rem 0;
+}
+.card_details {
+    font-weight:400;
+    font-size: 1rem;
+    margin:0;
+}
+.cards_Container {
+    display: "flex";
+    flex-wrap: wrap;
+    
+}
+.search-box {
+    outline: none;
+    width:100%;
+    border:1px solid grey;
+    font-size:1rem;
+    padding:1rem;
+    border-radius: .5rem;
+}
