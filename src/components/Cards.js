@@ -7,7 +7,7 @@ import "../cards.css";
 //initializing our useDispatch"
 
 export const Card = () => {
-  const users = useSelector((state) => state.user1.user);
+  const users = useSelector((state) => state.user.user);
   console.log(users);
   //search bar
   const [filteredList, setFilteredList] = useState(users);
@@ -23,7 +23,9 @@ export const Card = () => {
         user.name.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
         user.job.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
         user.age.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
-        user.country.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        user.country.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
+        user.hobbies[0].toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
+        user.hobbies[1].toLowerCase().indexOf(query.toLowerCase()) !== -1
       );
     });
     //trigger render with updated values
@@ -33,7 +35,7 @@ export const Card = () => {
     //     return user.match(searchInput);
     //   });
   };
-
+  console.log(filteredList);
   //initializing our useDispatch
   const dispatch = useDispatch();
 
@@ -51,9 +53,7 @@ export const Card = () => {
         className="search-box"
       />
       <div className="cards_container">
-        {filteredList
-          .filter((user) => user.age >= 22 && user.age <= 25)
-          .map(
+        {users.map(
             (
               user,
               index //user is the payload
@@ -80,28 +80,6 @@ export const Card = () => {
                     <h4 className="card_details">
                       Hobbies: {user.hobbies.join(", ")}
                     </h4>
-
-                    {/* <button
-               
-              //   style={{
-              //     width: "30px",
-              //     height: "30px",
-              //     backgroundColor: "red",
-              //     alignItems: "center",
-              //     justifyContent: "center",
-              //     borderWidth: "1px",
-              //     borderRadius: "4px",
-              //     borderColor: "red",
-              //     marginLeft: "295px",
-              //     paddingBottom: "10px",
-              //     color: "white",
-              //     fontSize: "14px",
-              //     textAlign: "center",
-              //     fontStyle: "oblique",
-              //     fontWeight: "bold",
-              //   }}
-              //
-              // </button> */}
                   </div>
                 </div>
               );
