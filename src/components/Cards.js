@@ -18,7 +18,7 @@ export const Card = () => {
     //creating copy of users
     var updatedUsers = [...users];
     //including all items that include the search query
-    updatedUsers = updatedUsers.filter((user) => {
+    updatedUsers = updatedUsers.filter((user, index) => {
       return (
         user.name.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
         user.job.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
@@ -53,38 +53,38 @@ export const Card = () => {
         className="search-box"
       />
       <div className="cards_container">
-        {users.map(
-            (
-              user,
-              index //user is the payload
-            ) => {
-              return (
-                <div key={index} className="card">
-                  <div style={{ flexDirection: "row" }}>
-                    <div className="card_button">
-                      <h1
-                        style={{ color: "red", marginLeft: "225px" }}
-                        onClick={() => removeUser(user)}
-                      >
-                        {/* //user is the payload */} <TiDelete />{" "}
-                      </h1>
-                    </div>
-                    <div className="card_title">{user.name}</div>
+        {filteredList.map(
+          (
+            user,
+            index //user is the payload
+          ) => {
+            return (
+              <div key={index} className="card">
+                <div style={{ flexDirection: "row" }}>
+                  <div className="card_button">
+                    <h1
+                      style={{ color: "red", marginLeft: "225px" }}
+                      onClick={() => removeUser(user)}
+                    >
+                      {/* //user is the payload */} <TiDelete />{" "}
+                    </h1>
                   </div>
-                  <div className="card_body">
-                    <h3 className="card_details">Age: {user.age} Years Old</h3>
-                    <h3 className="card_details">Job Title: {user.job}</h3>
-                    <h3 className="card_details">
-                      Country of Origin: {user.country}
-                    </h3>
-                    <h4 className="card_details">
-                      Hobbies: {user.hobbies.join(", ")}
-                    </h4>
-                  </div>
+                  <div className="card_title">{user.name}</div>
                 </div>
-              );
-            }
-          )}
+                <div className="card_body">
+                  <h3 className="card_details">Age: {user.age} Years Old</h3>
+                  <h3 className="card_details">Job Title: {user.job}</h3>
+                  <h3 className="card_details">
+                    Country of Origin: {user.country}
+                  </h3>
+                  <h4 className="card_details">
+                    Hobbies: {user.hobbies.join(", ")}
+                  </h4>
+                </div>
+              </div>
+            );
+          }
+        )}
       </div>
     </div>
   );
