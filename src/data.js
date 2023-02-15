@@ -18,7 +18,7 @@ const Users = [
   {
     id: 2,
     name: "Kim Son",
-    age: "25",
+    age: "24",
     job: "Backend Developer",
     country: "South Korea",
     hobbies: ["Exploring", "Singing"],
