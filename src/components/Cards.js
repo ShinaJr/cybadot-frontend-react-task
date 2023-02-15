@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Users from "../data.js";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser } from "../features/user/userSlice";
-import { TiDelete } from "react-icons/ti";
+import { TiDelete } from "react-icons/ti/index";
 import "../cards.css";
 //initializing our useDispatch"
 
