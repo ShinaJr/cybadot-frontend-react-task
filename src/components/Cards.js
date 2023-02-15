@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Users from "../data.js";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser } from "../features/user/userSlice";
-import { FiDelete } from "react-icons/fi";
+import { FiDelete } from "react-icons/fi/index.d.ts";
 import "../cards.css";
 //initializing our useDispatch"
 
