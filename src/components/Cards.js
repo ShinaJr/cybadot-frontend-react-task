@@ -53,7 +53,7 @@ export const Card = () => {
         className="search-box"
       />
       <div className="cards_container">
-        {filteredList.map(
+        {users.map(
           (
             user,
             index //user is the payload
