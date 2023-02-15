@@ -45,7 +45,7 @@ export const Card = () => {
 
   return (
     <div>
-      <h1>User's Contact Details</h1>
+      <h1>Users Contact Details</h1>
       <input
         type="text"
         placeholder="Search here"

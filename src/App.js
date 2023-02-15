@@ -2,6 +2,7 @@ import { Card } from "./components/Cards.js";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./App.css";
+import React from "react";
 
 function App() {
   return (
