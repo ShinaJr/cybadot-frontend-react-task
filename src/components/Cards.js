@@ -10,13 +10,13 @@ export const Card = () => {
   const users = useSelector((state) => state.user.user);
   console.log(users);
   //search bar
-  const [filteredList, setFilteredList] = useState(Users);
+  const [filteredList, setFilteredList] = useState(users);
   const filterBySearch = (e) => {
     e.preventDefault();
     //accessing input value
     const query = e.target.value;
     //creating copy of users
-    var updatedUsers = [...Users];
+    var updatedUsers = [...users];
     //including all items that include the search query
     updatedUsers = updatedUsers.filter((user, index) => {
       return (
