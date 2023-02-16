@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Users from "../data.js";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser } from "../features/user/userSlice";
-import { FiDelete } from "react-icons/fi/index.d.ts";
+import { FaRegTimesCircle } from "react-icons/fa";
 import "../cards.css";
 //initializing our useDispatch"
 
@@ -66,7 +66,7 @@ export const Card = () => {
                       style={{ color: "red", marginLeft: "225px" }}
                       onClick={() => removeUser(user)}
                     >
-                      {/* //user is the payload */} <FiDelete />{" "}
+                      {/* //user is the payload */} <FaRegTimesCircle />{" "}
                     </h1>
                   </div>
                   <div className="card_title">{user.name}</div>
