@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Users from "../data.js";
+// import Users from "../data.js";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser } from "../features/user/userSlice";
 import { FaRegTimesCircle } from "react-icons/fa";
