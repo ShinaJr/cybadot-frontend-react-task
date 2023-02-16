@@ -30,7 +30,6 @@ export const Card = () => {
     });
     //trigger render with updated values
     setFilteredList(updatedUsers);
-    setFilteredList(users);
     // if (searchInput.length > 0) {
     //   users.find((user) => {
     //     return user.match(searchInput);
