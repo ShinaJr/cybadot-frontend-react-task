@@ -30,6 +30,7 @@ export const Card = () => {
     });
     //trigger render with updated values
     setFilteredList(updatedUsers);
+    setFilteredList(users);
     // if (searchInput.length > 0) {
     //   users.find((user) => {
     //     return user.match(searchInput);
@@ -63,6 +64,7 @@ export const Card = () => {
                 <div style={{ flexDirection: "row" }}>
                   <div className="card_button">
                     <h1
+                      key={index}
                       style={{ color: "red", marginLeft: "225px" }}
                       onClick={() => removeUser(user)}
                     >
