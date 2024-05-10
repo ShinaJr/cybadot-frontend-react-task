@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 export const SearchBar = () => {
   const users = useSelector((state) => state.user1.user);

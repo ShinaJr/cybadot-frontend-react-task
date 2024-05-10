@@ -14,7 +14,7 @@ export const userSlice = createSlice({
         (user) => user.id !== action.payload.id
       );
       state.user = removeUser;
-      //state.user.pop(action.payload.id);
+      // state.user.pop(action.payload.id);
       // state.user.splice(action.payload.id, 2);
     },
   },

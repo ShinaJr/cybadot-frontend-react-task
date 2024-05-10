@@ -10,7 +10,7 @@ function App() {
       <Provider store={store}>
         {/* <SearchBar /> */}
         <div className="cards_container">
-          <Card />
+          <Card/>
         </div>
       </Provider>
     </div>

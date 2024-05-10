@@ -18,7 +18,7 @@ export const Card = () => {
     //creating copy of users
     var updatedUsers = [...users];
     //including all items that include the search query
-    updatedUsers = updatedUsers.filter((user, index) => {
+    updatedUsers = updatedUsers.filter((user) => {
       return (
         user.name.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
         user.job.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
@@ -35,11 +35,11 @@ export const Card = () => {
     //     return user.match(searchInput);
     //   });
   };
-  console.log(filteredList);
+  // console.log(filteredList);
   // const deleteUser1 = filteredList.filter((user, id) =>
   //   user.splice(user.id, 2)
   // );
- 
+
   //initializing our useDispatch
   const dispatch = useDispatch();
 
@@ -57,22 +57,24 @@ export const Card = () => {
         className="search-box"
       />
       <div className="cards_container">
-        {filteredList.map(
+        {users.map(
           (
             user,
-            index //user is the payload
+            index
+            //user is the payload
           ) => {
             return (
-              <div key={index} className="card">
+              <div key={user.id} className="card">
                 <div style={{ flexDirection: "row" }}>
                   <div className="card_button">
-                    <h1
-                      key={index}
-                      style={{ color: "red", marginLeft: "225px" }}
-                      onClick={() => removeUser(user)}
-                    >
-                      {/* //user is the payload */} <FaRegTimesCircle />{" "}
-                    </h1>
+                    {
+                      <FaRegTimesCircle
+                        size={30}
+                        color="red"
+                        style={{ marginLeft: "225px" }}
+                        onClick={() => removeUser(user)}
+                      />
+                    }
                   </div>
                   <div className="card_title">{user.name}</div>
                 </div>
